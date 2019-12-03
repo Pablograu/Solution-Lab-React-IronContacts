@@ -44,7 +44,6 @@ class App extends Component {
   };
 
   handleAlphabetSort = () => {
-    console.log('alphaa');
     const sortedArr = this.state.contacts.sort((a, b) => {
       if (this.state.alphabetSorted) {
         return a.name.localeCompare(b.name);
@@ -76,13 +75,13 @@ class App extends Component {
       <div>
         <Header />
         <div className="allContacts">
-          <button onClick={this.getRandomContact} className="random-btn">
+          <button onClick={this.getRandomContact} className="btn">
             RANDOM CONTACT
           </button>
-          <button onClick={this.handlePopularitySort} className="random-btn">
+          <button onClick={this.handlePopularitySort} className="btn">
             SORT BY POPULARITY
           </button>
-          <button onClick={this.handleAlphabetSort} className="random-btn">
+          <button onClick={this.handleAlphabetSort} className="btn">
             SORT BY NAME
           </button>
           {allContacts}

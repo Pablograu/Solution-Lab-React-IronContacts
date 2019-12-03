@@ -6,7 +6,7 @@ export default function ContactCard(props) {
       <h3>{props.contact.name}</h3>
       <img src={props.contact.pictureUrl} alt="contact img"/>
       <h4>Popularity: {props.contact.popularity}</h4>
-      <button onClick={()=>props.delete(props.contact.id)}>Delete</button>
+      <button className="btn" onClick={()=>props.delete(props.contact.id)}>Delete</button>
     </article>
   );
 }
