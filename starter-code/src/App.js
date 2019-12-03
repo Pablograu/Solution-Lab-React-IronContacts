@@ -57,10 +57,10 @@ class App extends Component {
     });
   };
 
-  handleDelete = (key) => {
+  handleDelete = (index) => {
     let sortedList = [...this.state.contacts];
-    sortedList.splice(key, 1)
-    console.log('deleted', key, sortedList);
+    sortedList.splice(index, 1)
+    console.log('deleted', index, sortedList);
     this.setState({
       contacts: sortedList
     })
